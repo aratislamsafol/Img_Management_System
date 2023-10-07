@@ -2,13 +2,8 @@ import ImgManage from "./Components/features/ImgManage"
 
 function App() {
     const handelImageUploada =(file, base64Image)=>{
-      console.log(`getFile - `,file.name);
+      // console.log(`getFile - `,file.name);
       // console.log(`base64ImageUrl - `,base64Image);
-      return (
-        <>
-          <img src={file.name} alt="" />
-        </>
-      );
     }
 
     const imgFormat = ["jpg", "jpeg", "png" ];

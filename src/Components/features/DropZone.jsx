@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import classes from '../assets/css/module/fileUp.module.scss';
+import classes from '../../assets/css/module/fileUp.module.scss';
 // eslint-disable-next-line react/prop-types
-const ImageUploader = ({dataOnLoad, imgFormat, setError, error, selectedFile}) => {
+const DropZone = ({dataOnLoad, imgFormat, setError, error}) => {
     const [isDragging, setIsDragging] = useState(false);
 
       // Drag And Drop
@@ -48,17 +48,9 @@ const ImageUploader = ({dataOnLoad, imgFormat, setError, error, selectedFile}) =
                     <input type="file" accept={imgFormat} onChange={handleImageUploader} style={{ display: 'none' }} id="file-input" />
                     <p>or darg and drop</p>
                 </div>}
-
-                {selectedFile.map((selectFile, index)=>{
-                return(
-                    <div key={index} className="image-preview" style={{ width: "200px" }}>
-                        <img src={selectFile} alt="Uploaded" style={{ width: "200px" }} />
-                    </div>
-                )
-                })}
             </div>
         </div>
     );
 }
 
-export default ImageUploader;
+export default DropZone;
